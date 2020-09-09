@@ -1,6 +1,7 @@
 import singer
 from singer import metrics, metadata, Transformer
 from singer.bookmarks import set_currently_syncing
+from singer.transform import NO_INTEGER_DATETIME_PARSING, UNIX_SECONDS_INTEGER_DATETIME_PARSING
 
 from tap_insided.discover import discover
 from tap_insided.endpoints import ENDPOINTS_CONFIG
@@ -86,8 +87,14 @@ def sync_endpoint(client,
             if not isinstance(records, list):
                 records = [records]
 
+        unix_timestamps = endpoint.get('unix_timestamps', False)
+        if unix_timestamps:
+            integer_datetime_fmt = UNIX_SECONDS_INTEGER_DATETIME_PARSING
+        else:
+            integer_datetime_fmt = NO_INTEGER_DATETIME_PARSING
+
         with metrics.record_counter(stream_name) as counter:
-            with Transformer() as transformer:
+            with Transformer(integer_datetime_fmt=integer_datetime_fmt) as transformer:
                 for record in records:
                     if persist and stream_name in selected_streams:
                         record = {**record, **key_bag}

@@ -124,11 +124,13 @@ ENDPOINTS_CONFIG = {
     'users': {
         'path': '/user',
         'pk': ['userid'],
-        'number_indexed': True
+        'number_indexed': True,
+        'unix_timestamps': True
     },
     'user_activities': {
         'path': '/user/activity',
         'pk': ['event_uuid'],
-        'number_indexed': True
+        'number_indexed': True,
+        'unix_timestamps': True
     }
 }
