@@ -244,11 +244,8 @@
     "status": {
       "type": [
         "null",
-        "object"
-      ],
-      "additionalProperties": false,
-      "properties": {
-      }
+        "string"
+      ]
     },
     "scheduledBy": {
       "type": [
