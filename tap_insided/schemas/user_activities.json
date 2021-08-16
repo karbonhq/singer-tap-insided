@@ -36,12 +36,7 @@
       "type": [
         "null",
         "array"
-      ],
-      "items": {
-        "type": [
-          "string"
-        ]
-      }
+      ]
     },
     "time_added": {
       "type": [
