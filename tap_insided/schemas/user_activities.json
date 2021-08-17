@@ -36,7 +36,12 @@
       "type": [
         "null",
         "array"
-      ]
+      ],
+      "items": {
+        "type": [
+          "string"
+        ]
+      }
     },
     "time_added": {
       "type": [
@@ -85,9 +90,19 @@
       ]
     },
     "pageinfo": {
-      "type": [
-        "null",
-        "object"
+      "oneOf": [
+        {
+          "type": [
+            "null",
+            "object"
+          ]
+        },
+        {
+          "type": [
+            "null",
+            "array"
+          ]
+        }
       ],
       "additionalProperties": false,
       "properties": {
