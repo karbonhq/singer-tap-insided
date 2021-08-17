@@ -130,7 +130,7 @@ ENDPOINTS_CONFIG = {
     'user_activities': {
         'path': '/user/activity',
         'pk': ['event_uuid'],
-        'number_indexed': True,
+        'is_list': True,
         'unix_timestamps': True
     }
 }

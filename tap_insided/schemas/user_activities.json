@@ -88,28 +88,6 @@
         "null",
         "boolean"
       ]
-    },
-    "pageinfo": {
-      "type": [
-        "null",
-        "object"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "post_id": {
-          "type": [
-            "null",
-            "string"
-          ]
-        }
-      }
-    },
-    "time_processed": {
-      "type": [
-        "null",
-        "string"
-      ],
-      "format": "date-time"
     }
   }
 }

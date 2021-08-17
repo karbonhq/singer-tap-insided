@@ -82,6 +82,9 @@ def sync_endpoint(client,
                     records.append(value)
                 except:
                     pass
+        elif endpoint.get('is_list', False) == True:
+            if isinstance(data, list):
+                records = data
         else:
             records = data['result']
             if not isinstance(records, list):
