@@ -88,31 +88,6 @@
         "null",
         "boolean"
       ]
-    },
-    "pageinfo": {
-      "oneOf": [
-        {
-          "type": [
-            "null",
-            "object"
-          ]
-        },
-        {
-          "type": [
-            "null",
-            "array"
-          ]
-        }
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "post_id": {
-          "type": [
-            "null",
-            "string"
-          ]
-        }
-      }
     }
   }
 }
